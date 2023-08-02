@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Cetus </title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon-1.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/sample.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .color-text {
+      color: #FFF !;
+      font-family: "Poppins" !important;
+      font-size: 16px !important;
+      font-style: normal !important;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.408px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="container-fluid">
+      <div class="row" style="height: 100vh;">
+        <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 seat  mobile" id="mobileDiv  ">
+          <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+            allow="vr" class="iframe-tag"></iframe>
+          
+          <div class="container logo-position-div">
+            <div class="row">
+              <div class="col-md-3 logo">
+                <image src="./images/logo.png" alt="logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 lather-side scroll ">
+          <div class="leather-section leather-content leathers">
+            <div>
+              <h2 class="lather-button-text">Seat Configurator</h2>
+            </div>
+            <div class="lather-button-text-after"></div>
+            <div class="lather-side-inner ">
+              <div class="">
+                <section class="faq-container">
+                  <div class="faq-two">
+                    <!-- faq question -->
+                    <h1 class="faq-page">Head rest</h1>
+
+                    <div class="faq-body">
+                      <div class="tabs-new-cutom-main">
+                        <div class="tabs-sub-div-custom">
+                          <p onclick="showTabContent(1); changeBaseColor(seat['HEADRESTMAT'], config.baseColors.leather.ch.ch1); changeMaterial(seat['HEADRESTMAT'], config.noPattern.ch.normals.normal1, 3, 3)"
+                            class="tab tab1 active-tab">Charm</p>
+                          <p onclick="showTabContent(2); changeBaseColor(seat['HEADRESTMAT'], config.baseColors.leather.fe.fe1); changeMaterial(seat['HEADRESTMAT'], config.noPattern.fe.normals.normal1, 6, 6)"
+                            class="tab tab2">Feather</p>
+                          <p onclick="showTabContent(3); changeBaseColor(seat['HEADRESTMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['HEADRESTMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                            class="tab tab3">Nappa</p>
+                        </div>
+                        <div class="tabs-custom-content">
+                          <div id="tabContent1" class="tab-content tab1" style="display:block;">
+                            <div>
+                              <div class="popup-content">
+                                <p>Colors</p>
+                                <div class="color-div">
+                                  <div class="color-1 para-text" id="chColorOptions">
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div id="tabContent2" class="tab-content tab2" style="display:none;">
+                            <div>
+                              <div class="popup-content">
+                                <p>Colors</p>
+                                <div class="color-1 para-text" id="feColorOptions">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="tabContent3" class="tab-content tab3" style="display:none;">
+                            <div>
+                              <div class="head-rest-nappa">
+                                <p onclick="showSubTabHeadNappa(1, 1); changeBaseColor(seat['HEADRESTMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['HEADRESTMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                                  class="head-sub-tab-nappa head-sub-tab1 active-sub-tab-head-nappa">
+                                  PG</p>
+                                <p onclick="showSubTabHeadNappa(1, 2); changeBaseColor(seat['HEADRESTMAT'], config.baseColors.leather.pn.pn1); changeMaterial(seat['HEADRESTMAT'], config.noPattern.na.normals.normal2, 5, 5)"
+                                  class="head-sub-tab-nappa head-sub-tab2">PN</p>
+                              </div>
+                              <div id="showSubTabHeadNappa11" class="sub-tab-head-nappa head-sub-tab1"
+                                style="display:block;">
+                                <div>
+                                  <div class="popup-content">
+                                    <p>Colors</p>
+                                    <div class="color-div">
+                                      <div id="pgColorOptions" class="color-1 para-text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="showSubTabHeadNappa12" class="sub-tab-head-nappa head-sub-tab2"
+                                style="display:none;">
+                                <div>
+                                  <div class="popup-content">
+                                    <p>Colors</p>
+                                    <div class="color-div">
+                                      <div id="pnColorOptions" class="color-1 para-text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-line" />
+                  <div class="faq-one">
+                    <!-- faq question -->
+                    <h1 class="faq-page">Back Rest</h1>
+                    <div class="faq-body">
+                      <div class="tabs-cutom-back">
+                        <div class="tabs-custom-sub-div-back">
+                          <p onclick="showTabBack(1); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.ch.ch1); changePattern(1, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'ch', 1, 1, 0, 0);"
+                            class="back tab1 active-tab">Charm</p>
+                          <p onclick="showTabBack(2); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.fe.fe1); changePattern(1, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'fe', 1, 1, 0, 0)"
+                            class="back tab2">Feather</p>
+                          <p onclick="showTabBack(3); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.al.al2); changePattern(1, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'al', 1, 1, 0, 0)"
+                            class="back tab3">Alcantra</p>
+                          <p onclick="showTabBack(4); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)"
+                            class="back tab4">Nappa</p>
+                        </div>
+                        <div class="tabs-wing-content">
+                          <div id="backContent1" class="back-content tab1" style="display:block;">
+                            <div>
+                              <div class="popup-content">
+                                <p>Colors</p>
+                                <div class="color-div">
+                                  <div class="color-1 para-text" id="chColorOptions5">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="pattern-border">
+                                <p class="pattern-text">Patterns</p>
+                                <div class="color-div">
+                                  <div class="color-1 para-text" id="ptchColorOptions">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="backContent2" class="back-content tab2" style="display:none;">
+                            <div>
+                              <div class="popup-content">
+                                <p>Colors</p>
+                                <div class="color-1 para-text" id="feColorOptions2">
+                                </div>
+                              </div>
+                              <div class="pattern-border">
+                                <p class="pattern-text">Patterns</p>
+                                <div class="color-div">
+                                  <div class="color-1 para-text" id="ptfeColorOptions">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="backContent3" class="back-content tab3" style="display:none;">
+                            <div>
+                              <div class="popup-content">
+                                <p>Colors</p>
+                                <div class="color-div">
+                                  <div id="alColorOptions" class="color-1 para-text">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="pattern-border">
+                                <p class="pattern-text">Patterns</p>
+                                <div class="color-div">
+                                  <div class="color-1 para-text" id="ptalColorOptions">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="backContent4" class="back-content tab4" style="display:none;">
+                            <div class="sub-tab-main">
+                              <p onclick="showSubTabContent(1,1); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'na', 5, 5, 0, 0)"
+                                class="sub-tab sub-tab1 active-sub-tab">PG</p>
+                              <p onclick="showSubTabContent(1,2); changeBaseColor(seat['PATTERN1MAT'], config.baseColors.leather.pn.pn1); changePattern(2, seat['PATTERN1MAT'], seat['STITCHPATTERN1MAT'], seat['PATTERNDOTS1MAT'], config.pattern.noPattern, 'na', 5, 5, 0, 0)"
+                                class="sub-tab sub-tab2">PN</p>
+                            </div>
+                            <div id="subTabContent11" class="sub-tab-content sub-tab1" style="display:block;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+
+                                  <div class="color-div">
+                                    <div id="pgColorOptions5" class="color-1 para-text">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="pattern-border">
+                                  <p class="pattern-text">Patterns</p>
+                                  <div class="color-div">
+                                    <div class="color-1 para-text" id="ptpgColorOptions">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="subTabContent12" class="sub-tab-content sub-tab2" style="display:none;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="pnColorOptions5" class="color-1 para-text">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="pattern-border">
+                                  <p class="pattern-text">Patterns</p>
+                                  <div class="color-div">
+                                    <div class="color-1 para-text" id="ptpnColorOptions">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="hr-line" />
+                    <div class="faq-one">
+                      <!-- faq question -->
+                      <h1 class="faq-page">Seat base</h1>
+                      <!-- faq answer -->
+                      <div class="faq-body">
+                        <div class="seat-base">
+                          <select id="myData" onchange="showSelectedData()">
+                            <option value=" ">Select the Option </option>
+                            <option value="option1">Section - 1</option>
+                            <option value="option2">Section - 2</option>
+                          </select>
+                        </div>
+                        <div id="selectData"></div>
+                        <script>
+                          const totalCHColors = 20;
+                          const totalPGColors = 10;
+                          const totalPNColors = 10;
+                          const totalALColors = 15;
+                          const totalPTColors = 8;
+                          const alNames = {
+                            al1: "AL 1045", al2: "AL 1110", al3: "AL 2911", al4: "AL 2930", al5: "AL 2932",
+                            al6: "AL 2934", al7: "AL 2940", al8: "AL 2957", al9: "AL 2974", al10: "AL 3322", al11: "AL 4097",
+                            al12: "AL 4996", al13: "AL 6833", al14: "AL 7586", al15: "AL 9002",
+                          };
+                          const PTNames = { pt8: "NO PT", pt1: "PT 1", pt2: "PT 2", pt3: "PT 3", pt4: "PT 4", pt5: "PT 5", pt6: "PT 6", pt7: "PT 7", }
+                          function generateColorOptions(category, totalColors, divId, onClickFunction, includeSeries = true, rows, imagesPerRow) {
+                            const colorOptionsDiv = document.getElementById(divId);
+                            if (!colorOptionsDiv) {
+                              console.error(`Element with id '${divId}' not found.`);
+                              return;
+                            }
+                            colorOptionsDiv.classList.add('color-options-container');
+                            for (let row = 0; row < rows; row++) {
+                              const currentRow = document.createElement('div');
+                              currentRow.classList.add('color-row');
+                              colorOptionsDiv.appendChild(currentRow);
+                              for (let col = 0; col < imagesPerRow; col++) {
+                                const colorIndex = row + col * rows + 1;
+                                if (colorIndex > totalColors) break;
+                                const div = document.createElement('div');
+                                div.classList.add('ch-color');
+                                div.onclick = function () {
+                                  onClickFunction(category, colorIndex);
+                                };
+
+                                const img = document.createElement('img');
+                                if (category === 'pt') {
+                                  img.src = `./images/color/${category}/pt-${colorIndex}.png`;
+                                } else {
+                                  img.src = `./images/color/${category}/${category}${includeSeries ? '-' + colorIndex : ''}.png`;
+                                }
+                                img.alt = 'color';
+
+                                const p = document.createElement('p');
+                                if (category === 'al') {
+                                  p.textContent = alNames[`al${colorIndex}`];
+                                } else if (category === 'pt') {
+                                  p.textContent = PTNames[`pt${colorIndex}`];
+                                } else {
+                                  p.textContent = `${category.toUpperCase()} ${colorIndex}`;
+                                }
+                                div.appendChild(img);
+                                div.appendChild(p);
+                                currentRow.appendChild(div);
+                              }
+                            }
+                          }
+
+                          function onClickPPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN2MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN2MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS2MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "na", 5, 5, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "na", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickPPPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN3MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN3MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS3MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "na", 5, 5, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "na", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickAPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN2MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN2MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS2MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "al", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "al", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickAAPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN3MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN3MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS3MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "al", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "al", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickFPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN2MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN2MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS2MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "fe", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "fe", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickFFPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN3MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN3MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS3MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "fe", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "fe", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickCPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN2MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN2MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS2MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "ch", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "ch", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickCCPattern(category, colorIndex) {
+                            console.log("test", colorIndex)
+                            const patternIndex = colorIndex;
+                            console.log("c-index", patternIndex)
+                            const patternMat = seat['PATTERN3MAT'];
+                            const stitchPatternMat = seat['STITCHPATTERN3MAT'];
+                            const patternDotsMat = seat['PATTERNDOTS3MAT'];
+                            const ptName = PTNames[`pt${patternIndex}`];
+                            console.log("p-name", ptName)
+
+                            if (ptName == 'NO PT') {
+                              console.log("test2", patternMat)
+                              console.log("test2", stitchPatternMat)
+                              console.log("test2", config.pattern.noPattern)
+                              console.log("test2", patternDotsMat)
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, config.pattern.noPattern, "ch", 1, 1, 0, 0);
+                            }
+                            else {
+                              const pattern = config.pattern[`pattern${patternIndex}`];
+                              changePattern(1, patternMat, stitchPatternMat, patternDotsMat, pattern, "ch", 1, 1, 0, 0);
+                            }
+
+                          }
+                          function onClickPATTERN2MAT(category, colorIndex) {
+                            console.log("onClick-pattern-calling")
+                            changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather[category][`${category}${colorIndex}`]);
+                          }
+                          function onClickPATTERN3MAT(category, colorIndex) {
+                            console.log("onClick-pattern-calling")
+                            changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather[category][`${category}${colorIndex}`]);
+                          }
+                          function showSelectedData() {
+                            var select = document.getElementById("myData");
+                            var selectedValue = select.value;
+                            var div = document.getElementById("selectData");
+                            div.innerHTML = "";
+                            if (selectedValue === "option1") {
+                              div.innerHTML = `
+                              <div class="tabs-cutom-base">
+                                <div class="tabs-custom-sub-div-base">
+                                  <p onclick="showTabBase(1); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.ch.ch1); changePattern(1, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'ch', 1, 1, 0, 0)" class="base tab1 ">Charm</p>
+                                  <p onclick="showTabBase(2); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.fe.fe1); changePattern(1, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'fe', 1, 1, 0, 0)" class="base tab2 active-tab">Feather</p>
+                                  <p onclick="showTabBase(3); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.al.al1); changePattern(1, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'al', 1, 1, 0, 0)" class="base tab3">Alcantra</p>
+                                  <p onclick="showTabBase(4); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="base tab4">Nappa</p>  
+                                </div>
+                                <div class="tabs-wing-content">
+                                  <div id="baseContent1" class="base-content tab1" style="display:none;">
+                                    <div> 
+                                      <div class="popup-content"> 
+                                                <p>Colors</p>
+                                                 <div class="color-div">         
+                                                    <div id="chseatbaseColorOptions" class="color-1 para-text"></div>
+                                                   </div> 
+                                            </div> 
+                                            <div class="pattern-border">
+                                              <p class="pattern-text">Patterns</p>
+                                              <div class="color-div">
+                                  <div class="color-1 para-text" id="ptchColorOptions2">
+                                  </div>
+                                </div> 
+                                            </div> 
+                                    </div>
+                                  
+                                  </div>
+                                  <div id="baseContent2" class="base-content tab2" style="display:block;">
+                                    <div>
+                                       <div class="popup-content"> 
+                                                 <p>Colors</p> 
+                                                 <div class="color-div">
+                                                  <div id="feseatbaseColorOptions" class="color-1 para-text"></div>
+                                                 </div>  
+                                             </div> 
+                                             <div class="pattern-border">
+                                         <p class="pattern-text">Patterns</p>
+                                         <div class="color-div">
+                                  <div class="color-1 para-text" id="ptfeColorOptions2">
+                                  </div>
+                                </div>
+                                       </div>
+                                     </div>
+                                    </div>
+                                  </div>
+                                  <div id="baseContent3" class="base-content tab3" style="display:none;">
+                                    <div>
+                                      <div class="popup-content"> 
+                                          <p>Colors</p>
+                                           <div class="color-div">
+                                                 
+                                            <div id="alseatbaseColorOptions" class="color-1 para-text"></div>
+                                            </div> 
+                                      </div> 
+                                      <div class="pattern-border">
+                                        <p class="pattern-text">Patterns</p>
+                                        <div class="color-div">
+                                  <div id="ptalColorOptions2" class="color-1 para-text">
+                                  </div>
+                                </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div id="baseContent4" class="base-content tab4" style="display:none;">
+                                    <div class="sub-tab-main-one"> 
+                                        <p onclick="showSubTabContentOne(1, 1); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="sub-tab-one subb-tab1 active-sub-tab-one">PG</p>
+                                        <p onclick="showSubTabContentOne(1, 2); changeBaseColor(seat['PATTERN2MAT'], config.baseColors.leather.pn.pn1); changePattern(2, seat['PATTERN2MAT'], seat['STITCHPATTERN2MAT'], seat['PATTERNDOTS2MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="sub-tab-one subb-tab2">PN</p> 
+                                    </div>
+                                    <div id="subTabContentOne11" class="sub-tab-content-one subb-tab1" style="display:block;"> 
+                                    <div>
+                                    <div class="popup-content"> 
+                                      <p>Colors</p>
+                                      <div id="pgseatbaseColorOptions" class="color-1 para-text"></div>
+                                                
+                                        </div>  
+                                    </div> 
+                                    <div class="pattern-border">
+                                            <p class="pattern-text">Patterns</p>
+                                            <div class="color-div">
+                                    <div class="color-1 para-text" id="ptpgColorOptions2">
+                                    </div>
+                                  </div>
+                                          </div> 
+                                        </div>
+                                    </div>
+                                    <div id="subTabContentOne12" class="sub-tab-content-one subb-tab2" style="display:none;"> 
+                                    <div>
+                                    <div class="popup-content"> 
+                                      <p>Colors</p>
+                                        <div id="pnseactbaseColorOptions" class="color-1 para-text"></div>  
+                                      </div> 
+                                      <div class="pattern-border">
+                                            <p class="pattern-text">Patterns</p>
+                                            <div class="color-div">
+                                    <div class="color-1 para-text" id="ptpnColorOptions2">
+                                    </div>
+                                  </div> 
+                                          </div> 
+                                        </div>
+                                    </div> 
+                              </div>   
+                              `;
+                              generateColorOptions('ch', totalCHColors, 'chseatbaseColorOptions', onClickPATTERN2MAT, true, 4, 5);
+                              generateColorOptions('fe', totalCHColors, 'feseatbaseColorOptions', onClickPATTERN2MAT, true, 4, 5);
+                              generateColorOptions('al', totalALColors, 'alseatbaseColorOptions', onClickPATTERN2MAT, true, 4, 4);
+                              generateColorOptions('pg', totalPGColors, 'pgseatbaseColorOptions', onClickPATTERN2MAT, true, 4, 3);
+                              generateColorOptions('pn', totalPNColors, 'pnseactbaseColorOptions', onClickPATTERN2MAT, true, 4, 3);
+                              generateColorOptions('pt', totalPTColors, 'ptchColorOptions2', onClickCPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptfeColorOptions2', onClickFPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptalColorOptions2', onClickAPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptpgColorOptions2', onClickPPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptpnColorOptions2', onClickPPattern, true, 4, 2);
+                            } else if (selectedValue === "option2") {
+                              div.innerHTML = `
+                              <div class="tabs-cutom-base">
+                            <div class="tabs-custom-sub-div-base">
+                              <p onclick="showTabBase(1); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.ch.ch1); changePattern(1, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'ch', 1, 1, 0, 0)" class="base tab1 ">Charm</p>
+                              <p onclick="showTabBase(2); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.fe.fe1); changePattern(1, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'fe', 1, 1, 0, 0)" class="base tab2 active-tab">Feather</p>
+                              <p onclick="showTabBase(3); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.al.al1); changePattern(1, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'al', 1, 1, 0, 0)" class="base tab3">Alcantra</p>
+                              <p onclick="showTabBase(4); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="base tab4">Nappa</p> 
+                            </div>
+                            <div class="tabs-wing-content">
+                              <div id="baseContent1" class="base-content tab1" style="display:none;">
+                                <div> 
+                                  <div class="popup-content"> 
+                                      <p>Colors</p>
+                                        <div class="color-div">
+                                          <div id="chseatbaseColorOptions2" class="color-1 para-text"></div>
+                                        </div> 
+                                  </div> 
+                                  <div class="pattern-border">
+                                    <p class="pattern-text">Patterns</p>
+                                    <div class="color-div">
+                                          <div id="ptchColorOptions3" class="color-1 para-text"></div>
+                                        </div>
+                                  </div> 
+                                </div> 
+                              </div>
+                              <div id="baseContent2" class="base-content tab2" style="display:block;">
+                                <div> 
+                                    <div class="popup-content"> 
+                                      <p>Colors</p> 
+                                      <div class="color-div">
+                                        <div id="feseatbaseColorOptions2" class="color-1 para-text"></div>
+                                      </div>  
+                                      </div> 
+                                      <div class="pattern-border">
+                                      <p class="pattern-text">Patterns</p>
+                                      <div class="color-div">
+                                        <div id="ptfeColorOptions3" class="color-1 para-text"></div>
+                                      </div> 
+                                   </div> 
+                                 </div>  
+                                </div> 
+                              </div>
+                              <div id="baseContent3" class="base-content tab3" style="display:none;">
+                                <div> 
+                                  <div class="popup-content"> 
+                                      <p>Colors</p>
+                                       <div class="color-div">
+                                        <div id="alseatbaseColorOptions2" class="color-1 para-text"></div>
+                                      </div> 
+                                  </div> 
+                                  <div class="pattern-border">
+                                    <p class="pattern-text">Patterns</p>
+                                    <div class="color-div">
+                                        <div id="ptalColorOptions3" class="color-1 para-text"></div>
+                                      </div> 
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="baseContent4" class="base-content tab4" style="display:none;"> 
+                                <div class="sub-tab-main-one"> 
+                                    <p onclick="showSubTabContentOne(1, 1); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.pg.pg1); changePattern(1, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="sub-tab-one subb-tab1 active-sub-tab-one">PG</p>
+                                    <p onclick="showSubTabContentOne(1, 2); changeBaseColor(seat['PATTERN3MAT'], config.baseColors.leather.pn.pn1); changePattern(2, seat['PATTERN3MAT'], seat['STITCHPATTERN3MAT'], seat['PATTERNDOTS3MAT'], config.pattern.noPattern, 'na', 1, 1, 0, 0)" class="sub-tab-one subb-tab2">PN</p> 
+                                </div>
+                                <div id="subTabContentOne11" class="sub-tab-content-one subb-tab1" style="display:block;"> 
+                                <div>
+                                <div class="popup-content"> 
+                                  <p>Colors</p>
+                                   <div class="color-div">
+                                    <div id="pgseatbaseColorOptions2" class="color-1 para-text"></div>
+                                    </div>  
+                                </div> 
+                                <div class="pattern-border">
+                                    <p class="pattern-text">Patterns</p>
+                                    <div class="color-div">
+                                    <div id="ptpgColorOptions3" class="color-1 para-text"></div>
+                                    </div> 
+                                      </div> 
+                                    </div>
+                                </div>
+                                <div id="subTabContentOne12" class="sub-tab-content-one subb-tab2" style="display:none;"> 
+                                <div>
+                                <div class="popup-content"> 
+                                  <p>Colors</p>
+                                   <div class="color-div">
+                                    <div id="pnseatbaseColorOptions2" class="color-1 para-text"></div>
+                                   </div>  
+                                  </div> 
+                                  <div class="pattern-border">
+                                        <p class="pattern-text">Patterns</p>
+                                        <div class="color-div">
+                                    <div id="ptpnColorOptions3" class="color-1 para-text"></div>
+                                   </div> 
+                                      </div> 
+                                    </div>
+                                </div>  
+                              </div>
+                          </div>  
+                              `;
+                              generateColorOptions('ch', totalCHColors, 'chseatbaseColorOptions2', onClickPATTERN3MAT, true, 4, 5);
+                              generateColorOptions('fe', totalCHColors, 'feseatbaseColorOptions2', onClickPATTERN3MAT, true, 4, 5);
+                              generateColorOptions('pg', totalPGColors, 'pgseatbaseColorOptions2', onClickPATTERN3MAT, true, 4, 5);
+                              generateColorOptions('pn', totalPNColors, 'pnseatbaseColorOptions2', onClickPATTERN3MAT, true, 4, 5);
+                              generateColorOptions('al', totalALColors, 'alseatbaseColorOptions2', onClickPATTERN3MAT, true, 4, 5);
+                              generateColorOptions('pt', totalPTColors, 'ptchColorOptions3', onClickCCPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptfeColorOptions3', onClickFFPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptalColorOptions3', onClickAAPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptpgColorOptions3', onClickPPPattern, true, 4, 2);
+                              generateColorOptions('pt', totalPTColors, 'ptpnColorOptions3', onClickPPPattern, true, 4, 2);
+                            }
+                          }
+                        </script>
+                      </div>
+                    </div>
+                    <hr class="hr-line" />
+                    <div class="faq-four">
+                      <!-- faq question -->
+                      <h1 class="faq-page">Wings</h1>
+                      <!-- faq answer -->
+                      <div class="faq-body">
+                        <div class="tabs-cutom-wings">
+                          <div class="tabs-custom-sub-div-wings">
+                            <p onclick="showTabWing(1); changeBaseColor(seat['WINGMAT'], config.baseColors.leather.ch.ch1); changeMaterial(seat['WINGMAT'], config.noPattern.ch.normals.normal1, 3, 3)"
+                              class="wing tab1">Charm</p>
+                            <p onclick="showTabWing(2); changeBaseColor(seat['WINGMAT'], config.baseColors.leather.fe.fe1); changeMaterial(seat['WINGMAT'], config.noPattern.fe.normals.normal1, 6, 6)"
+                              class="wing tab2">Feather</p>
+                            <p onclick="showTabWing(3); changeBaseColor(seat['WINGMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['WINGMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                              class="wing tab3">Nappa</p>
+                          </div>
+                          <div class="tabs-wing-content">
+                            <div id="wingContent1" class="wing-content tab1" style="display:block;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="wingmatColorOptions" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="wingContent2" class="wing-content tab2" style="display:none;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="wingmatColorOptions2" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="wingContent3" class="wing-content tab3" style="display:none;">
+                              <div class="sub-tab-main-two">
+                                <p onclick="showSubTabContentTwo(1, 1); changeBaseColor(seat['WINGMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['WINGMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                                  class="sub-tab-two subbb-tab1 active-sub-tab-two">PG</p>
+                                <p onclick="showSubTabContentTwo(1, 2); changeBaseColor(seat['WINGMAT'], config.baseColors.leather.pn.pn1); changeMaterial(seat['WINGMAT'], config.noPattern.na.normals.normal2, 5, 5)"
+                                  class="sub-tab-two subbb-tab2">PN</p>
+                              </div>
+                              <div id="subTabContentTwo11" class="sub-tab-content-two subbb-tab1"
+                                style="display:block;">
+                                <div>
+                                  <div class="popup-content">
+                                    <p>Colors</p>
+                                    <div class="color-div">
+                                      <div id="pgColorOptions4" class="color-1 para-text"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="subTabContentTwo12" class="sub-tab-content-two subbb-tab2" style="display:none;">
+                                <div>
+                                  <div class="popup-content">
+                                    <p>Colors</p>
+                                    <div class="color-div">
+                                      <div id="pnColorOptions4" class="color-1 para-text"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq-seven">
+                      <!-- faq question -->
+                      <h1 class="faq-page">Border strip</h1>
+                      <!-- faq answer -->
+                      <div class="faq-body">
+                        <div class="tabs-cutom-wings">
+                          <div class="tabs-custom-sub-div-wings">
+                            <p onclick="showTabBorder(1); changeBaseColor(seat['BORDERSTRIPMAT'], config.baseColors.leather.ch.ch1); changeMaterial(seat['BORDERSTRIPMAT'], config.noPattern.ch.normals.normal1, 3, 3)"
+                              class="border-tab tab1 active-tab">Charm</p>
+                            <p onclick="showTabBorder(2); changeBaseColor(seat['BORDERSTRIPMAT'], config.baseColors.leather.fe.fe1); changeMaterial(seat['BORDERSTRIPMAT'], config.noPattern.fe.normals.normal1, 6, 6)"
+                              class="border-tab tab2">Feather</p>
+                            <p onclick="showTabBorder(3); changeBaseColor(seat['BORDERSTRIPMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['BORDERSTRIPMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                              class="border-tab tab3">Nappa</p>
+                          </div>
+                          <div class="tabs-wing-content">
+                            <div id="borderContent1" class="border-content tab1" style="display:block;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="borderColorOptions" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="borderContent2" class="border-content tab2" style="display:none;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="borderColorOptions2" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="borderContent3" class="border-content tab3" style="display:none;">
+                              <div class="tabs-cutom-backstructure ">
+                                <div class="tabs-custom-sub-div-stitches">
+                                  <p onclick="showTabBorderNappa(1); changeBaseColor(seat['BORDERSTRIPMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['BORDERSTRIPMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                                    class="bordernappa tab1 active-tab">PG</p>
+                                  <p onclick="showTabBorderNappa(2); changeBaseColor(seat['BORDERSTRIPMAT'], config.baseColors.leather.pn.pn1); changeMaterial(seat['BORDERSTRIPMAT'], config.noPattern.na.normals.normal2, 5, 5)"
+                                    class="bordernappa tab2"> PN</p>
+                                </div>
+                                <div class="tabs-bordernappa-content ">
+                                  <div id="bordernappacontent1" class="bordernappacontent tab1" style="display:block;">
+                                    <div class="scrollable-content">
+                                      <div class="popup-content">
+                                        <p>Colors</p>
+                                        <div class="color-div">
+                                          <div id="pgColorOptions3" class="color-1 para-text"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="bordernappacontent2" class="bordernappacontent tab2" style="display:none;">
+                                  <div>
+                                    <div class="popup-content">
+                                      <p>Colors</p>
+                                      <div class="color-div">
+                                        <div id="pnColorOptions3" class="color-1 para-text"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq-five">
+                      <!-- faq question -->
+                      <h1 class="faq-page">Seat-Back Structure</h1>
+                      <!-- faq answer -->
+                      <div class="faq-body">
+                        <div class="tabs-cutom-seat">
+                          <div class="tabs-custom-sub-div-seats">
+                            <p onclick="showTabSeat(1); changeBaseColor(seat['SEATMAT'], config.baseColors.leather.ch.ch1); changeMaterial(seat['SEATMAT'], config.noPattern.ch.normals.normal1, 3, 3)"
+                              class="seatt tab1 active-tab">Charm</p>
+                            <p onclick="showTabSeat(2); changeBaseColor(seat['SEATMAT'], config.baseColors.leather.fe.fe1); changeMaterial(seat['SEATMAT'], config.noPattern.fe.normals.normal1, 9, 9)"
+                              class="seatt tab2">Feather</p>
+                            <p onclick="showTabSeat(3); changeBaseColor(seat['SEATMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['SEATMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                              class="seatt tab3">Nappa</p>
+
+                          </div>
+                          <div class="tabs-seat-content">
+                            <div id="seatContent1" class="seat-content tab1" style="display:block;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="seatbackColorOptions" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="seatContent2" class="seat-content tab2" style="display:none;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="seatbackColorOptions2" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="seatContent3" class="seat-content tab3" style="display:none;">
+                              <div class="tabs-cutom-backstructure ">
+                                <div class="tabs-custom-sub-div-stitches">
+                                  <p onclick="showTabSeatBack(1); changeBaseColor(seat['SEATMAT'], config.baseColors.leather.na.na1); changeMaterial(seat['SEATMAT'], config.noPattern.na.normals.normal1, 5, 5)"
+                                    class="seatback tab1 active-tab">PG</p>
+                                  <p onclick="showTabSeatBack(2); changeBaseColor(seat['SEATMAT'], config.baseColors.leather.pn.pn1); changeMaterial(seat['SEATMAT'], config.noPattern.na.normals.normal2, 5, 5)"
+                                    class="seatback tab2"> PN</p>
+                                </div>
+                                <div class="tabs-seatback-content r">
+                                  <div id="seatbackContent1" class="seatbackContent tab1" style="display:block;">
+                                    <div class="scrollable-content">
+                                      <div class="popup-content">
+                                        <p>Colors</p>
+                                        <div class="color-div">
+                                          <div id="pgColorOptions2" class="color-1 para-text"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="seatbackContent2" class="seatbackContent tab2" style="display:none;">
+                                  <div>
+                                    <div class="popup-content">
+                                      <p>Colors</p>
+                                      <div class="color-div">
+                                        <div id="pnColorOptions2" class="color-1 para-text"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq-six">
+                      <h1 class="faq-page">Stitches colors</h1>
+                      <div class="faq-body">
+                        <div class="tabs-cutom-stitch ">
+                          <div class="tabs-custom-sub-div-stitches">
+                            <p onclick="showTabStitch(1)" class="stitch tab1 active-tab">Body Stiches</p>
+                            <p onclick="showTabStitch(2)" class="stitch tab2"> Pattern Stiches</p>
+
+                          </div>
+                          <div class="tabs-stitch-content r">
+                            <div id="stitchContent1" class="stitch-content tab1" style="display:block;">
+
+                              <div class="scrollable-content">
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="stitColorOptions" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div id="stitchContent2" class="stitch-content tab2" style="display:none;">
+                              <div>
+                                <div class="popup-content">
+                                  <p>Colors</p>
+                                  <div class="color-div">
+                                    <div id="stitColorOptions2" class="color-1 para-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/test.js"></script>
+    <script src="./js/al.js"></script>
+</body>
+</html>

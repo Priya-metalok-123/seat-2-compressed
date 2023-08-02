@@ -1,0 +1,561 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.seat{
+    width: 100%;
+    padding-top: 30px;
+}
+.background{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #222222;
+    z-index: 20;
+}
+.buttons-lether-art-main-div{
+    display: flex;
+    flex-direction:column;
+text-align: center;
+   
+
+}
+.buttons-lether-art-main-div .btn-1 h6{
+    font-size: 18px;
+    color: #A73E52;
+    font-weight: 500;
+    text-align: center;
+}
+.buttons-lether-art-main-div .btn-2 h6{
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-align: center;
+}
+
+    
+
+
+.lather-side{
+    background-color: #1B1B1B;
+    /* opacity: 0.75; */
+    z-index: 50; 
+
+}
+.iframe-tag{
+    width: 100%;
+    height: 500px;
+    background-color:#222222;
+    /* align-items: end; */
+}
+
+.lather-button{
+    position: absolute;
+    /* background-color: aqua; */
+    /* width: 100px; */
+    height: 300px;
+    top: 10%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    text-align: center;
+}
+
+.leather-section{
+    margin-top: 8%; 
+    /* position: fixed; */
+}
+
+.lather-button-text{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-left: 10%;
+}
+.lather-button-text-after {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.30);
+    width: 90%;
+    margin: auto;
+}
+.color-div{
+    /* background-color: aqua; */
+    margin: auto; 
+}
+
+.color-12{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+.color-1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+.color-1 img{
+    width: 70px;
+    height: 70px;
+}
+.color-div-2{
+    /* background-color: aqua; */
+    margin: auto;
+    padding-left:8%;
+    position: relative;
+
+}
+.color-2{
+    display: flex !important;
+    flex-direction: row;
+    margin-top: 5%;
+    /* gap: 15px; */
+}
+.color-2 img{
+    width: 65px; 
+    cursor: pointer;
+    margin: auto;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<-----------------------------faq start ------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: 8%;
+
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 90%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    color: #888;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    letter-spacing: -0.408px;
+
+
+}
+.faq-body{
+   margin: auto;
+   width: 85%; 
+   padding: auto;
+   
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    /* background-color: #F9F9F9; */
+}
+.active {
+    color: #F9F9F9;
+}
+
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    /* background-color: white; */
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: url("../images/plus.svg"); 
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px; 
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: url("../images/subtract.svg");
+    /* Unicode character for "minus" sign (-) */
+}
+
+.tabs-sub-div{
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+.active-tab {
+    background-color:#A73E52;
+    padding: 4px;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Poppins;
+    /* font-size: 15px; */
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: left; 
+}
+
+.tabs-sub-div-custom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+}
+.sub-tab-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color :#FFF;
+}
+.active-sub-tab {
+    background-color:#A73E52;
+    padding: 4px;
+    border-radius: 5px;
+    height: 30px;
+
+    font-family: Poppins;
+    /* font-size: 15px; */
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: left;
+    } 
+@media (min-width:320px) and (max-width:767px){
+    .scroll {
+        max-height: 520px;
+    } 
+    .iframe-tag{ 
+        height: 400px; 
+    }
+    .logo{   
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .logo img{
+        width: 104px;
+    } 
+}
+
+
+@media (min-width:320px) and (max-width:770px){
+    .mobile-responsive-none{
+        display: none !important;
+    }
+    .buttons-lether-art-main-div{
+        display: flex;
+        flex-direction:row;
+    text-align: center;
+    justify-content: space-between;
+       
+    
+    }
+    .reverse-div{
+        flex-direction: column-reverse;
+    }
+    .seat{
+        padding-top: 0px;
+    }
+    .color-div{
+      padding-left: 0px;
+    }
+    .color-1 img{
+        width: 54px;
+        height: 54px;
+    }
+    .faq-body{
+        width: 100%;
+    } 
+
+}
+    /* .logo{ 
+        margin-bottom: 5%;
+    } */
+/* @media (min-width:1010px) and (max-width:1080px){
+    .color-1 img{
+        width: 54px;
+        height: 54px;
+    }
+} */
+ 
+/* ======================= popup start ============================= */
+.popup {
+    display: none; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 111111;
+    
+  }
+
+  /* Style for the popup content */
+  .popup-content { 
+    /* background-color: #fff; */
+    height: auto; 
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.25); 
+    background: #1B1B1B;
+  }
+  .popup-content p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* Style f
+  or the close button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -15px;
+  }
+
+  .close:hover {
+    color: #000;
+  }
+
+  .popup-button{
+    margin-top: 8%;
+    text-align: center !important;
+    display: flex;
+    gap: 5%;
+    margin-left:10% ;
+  }
+  .back-btn{
+    width: 109px;
+    height: 40px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    border: 2px;
+    gap: 10px;
+    background: none;
+    border: 2px solid #A73E52;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Poppins;
+    font-style: normal;  
+    letter-spacing: -0.408px;
+  }
+.done-btn{
+    width: 112px;
+    height: 40px; 
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #A73E52;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Poppins;  
+    letter-spacing: -0.408px;
+    border: none;
+
+
+}
+.ch-color-mat{
+    display: flex;
+    flex-direction: column; 
+}
+.ch-color-mat p{
+    margin-top: 2%;
+    color: #FFF;
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.408px;margin: auto;
+}
+
+.ch-color{
+    display: flex;
+    flex-direction: column; 
+}
+.ch-color img{
+    width: 60px; 
+}
+.ch-color p{
+    margin-top: 2%;
+    color: #FFF;
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.408px;
+}
+.para-text{
+    justify-content: space-around;
+
+}
+.para-text-1{
+    margin-left: 3%;
+    display: flex; 
+    gap: 10%;
+}
+
+  
+.tabs-custom-sub-div-wings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+}
+.tabs-custom-sub-div-seats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+} 
+.material-border{ 
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #1B1B1B;
+}
+.material-text{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: #fff;
+}
+
+.tabs-custom-sub-div-stitches{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+}
+.tabs-custom-sub-div-back{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+}
+.tabs-custom-sub-div-base{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFF;
+    cursor: pointer;
+}
+.pattern-border{ 
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #1B1B1B; 
+}
+.pattern-text{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: #fff;
+}
+.pattern-border p{ 
+    text-align: center; 
+}
+.back-rest-select select, .seat-base select{
+    margin: 20px 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: none !important; 
+    color: #888;
+    font-size: 16px;
+
+
+
+}
+#mySelect option, #myData option{ 
+    /* background: none !important; */
+    background-color: #1B1B1B; 
+}
+
+
+ /* Set the height of the scrollable div */
+ .scroll {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  /* Hide scrollbar for Webkit-based browsers */
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Styles for the mobile div when it's fixed */
+  .mobile.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Styles for smooth scrolling */
+  .scroll .content {
+    scroll-behavior: smooth;
+  } 
+
+  .mobile-patt{
+    display: none;
+  }
+@media (min-width:1024px) and (max-width:1024px){
+    .faq-body{
+        width: 90%;
+        padding: 0px;
+    }
+    .color-1{
+        gap: 5px;
+    }
+
+}
